@@ -18,6 +18,7 @@ from django.contrib import admin
 from basic_app import views
 from django.conf.urls import include
 
+
 urlpatterns = [
     url(r'^$', views.index_view, name="index_view"),
     url(r'^admin/', admin.site.urls),
