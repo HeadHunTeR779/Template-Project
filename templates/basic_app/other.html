@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html>   <!-- This always needs to be at the first line -->
+{% extends "basic_app/base.html" %}  <!-- Looks under tempaltes folder which you added in settings.py -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Other</title>
-</head>
 
-<body>
-</body>
+{% block title_block %}Other{% endblock %}
 
-</html>
+{%block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1> Woah I am in Other.html .!. </h1>
+  </div>
+</div>
+{% endblock %}

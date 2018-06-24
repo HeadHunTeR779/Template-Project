@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html>
+{% extends "basic_app/base.html" %}  <!-- Looks under tempaltes folder which you added in settings.py -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Relative URL Templates</title>
-</head>
+{% block title_block %}Relative URL Templates{% endblock %}
 
-<body>
-  <p> Head over to <a href="{% url 'basic_app:other' %}">Other Page</a>
-    <p> Head over to <a href="{% url 'admin:index' %}">Admin Panel</a>
-      <p> Head over to <a href="{% url 'index_view' %}">My Index</a>
-</body>
-
-</html>
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <p> Head over to <a href="{% url 'basic_app:other' %}">Other Page</a></p>
+    <p> Head over to <a href="{% url 'admin:index' %}">Admin Panel</a></p>
+    <p> Head over to <a href="{% url 'index_view' %}">My Index</a></p>
+    </div>
+  </div>
+{% endblock %}
